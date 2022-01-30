@@ -1,0 +1,46 @@
+.mainDiv {
+    height: 500px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.chart {
+    width: 550px;
+}
+
+
+#generete {
+    margin-top: 35px;
+    margin-left: 250px;
+    background-color: #2d2e22;
+    color: white;
+    height: 45px;
+    width: 150px;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.inputForm {
+    margin-bottom: 15px;
+}
+
+label {
+    padding: 10px;
+}
+
+input {
+    height: 25px;
+    width: 400px;
+}
+
+.addNew,.remove {
+    width: 30px;
+   
+    cursor: pointer;
+}
+
+.addNew {
+    font-size: 20px;
+}
+
