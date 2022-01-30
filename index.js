@@ -5,6 +5,7 @@ const getLabels = () => {
     const arrayListOfLabels = [];
     for(let i =0; i < inputFields.length;i++)  {
         const value = inputFields[i].querySelector("input").value;
+
         arrayListOfLabels.push(value);
     }
     return arrayListOfLabels;
@@ -15,6 +16,10 @@ const getInputs = () => {
     const arrayListOfInputs = [];
     for(let i =0; i < inputFields.length;i++)  {
         const value = inputFields[i].querySelectorAll("input")[1].value;
+        if(!parseInt(value)) {
+            alert("Please only write numbers in value inputs")
+            throw new Error("Letters included, where only numbers where expected")
+        }
         arrayListOfInputs.push(value);
     }
     return arrayListOfInputs;
@@ -37,7 +42,7 @@ const getColors = () => {
           const data = {
             labels: getLabels(),
             datasets: [{
-              label: 'Ora',
+              label: document.getElementById("chartName").value,
               data: getInputs(),
               backgroundColor: getColors(),
               borderColor: "transparent"
